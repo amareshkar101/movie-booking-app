@@ -1,0 +1,37 @@
+body{
+    background-color: #150941;
+    color: #f80040;
+}
+
+.i-s{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.i-left-s{
+    flex:1;
+}
+
+.i-right-s{
+    flex:1;
+}
+
+.i-img-s{
+    margin-top: 90px;
+    margin-left: 50px;
+    width: 550px;
+}
+
+.i-right-s{
+    margin-top: 30px;
+}
+
+.signin-style{
+    color: #f80040;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.headed-s{
+    padding-top: 10px;
+}
