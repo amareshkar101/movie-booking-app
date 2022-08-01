@@ -1,15 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import Movie1 from "../../assets/movie.avif";
-import Movie2 from "../../assets/movie1.avif";
-import Movie3 from "../../assets/movie2.avif";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "../../styles/ImageCarousel.css";
 
-const images = [Movie1, Movie2, Movie3];
-
-function ImageCarousel() {
+function ImageCarousel({ images }) {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -30,6 +25,7 @@ function ImageCarousel() {
     lazyLoad: true,
     dots: true,
     speed: 300,
+    autoplay: true,
     slidesToShow: 1,
     centerPadding: 0,
     centerMode: true,

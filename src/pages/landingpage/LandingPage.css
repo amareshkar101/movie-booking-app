@@ -1,8 +1,27 @@
-body{
-    background-color:whitesmoke;
+body {
+    background-color: white;
     color: #f80040;
 }
-/* body{
-    background-color: #150941;
-    color: #f80040;
-} */
+
+.movie-main{
+    min-height: 50vh;
+    text-align: center;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 50px;
+    margin-left: 0px;
+    text-align: center;
+    color: black;
+}
+.movie-poster
+{
+width: 300px;
+height: 420px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 20px;
+cursor: pointer;
+}

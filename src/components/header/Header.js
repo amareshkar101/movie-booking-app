@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../../styles/Header.css";
 
 const Header = () => {
@@ -27,24 +27,10 @@ const Header = () => {
             navigate("/");
           }}
         >
-          MY TICKET
+          Bookify
         </a>
       </div>
-      {/* <Button
-        type="submit"
-        variant="contained"
-        style={{
-          textTransform: "none",
-          width: "70px",
-          height: "40px",
-          marginTop: "10px",
-          marginRight: "20px",
-        }}
-        onClick={loginFn}
-        color="primary"
-      >
-        Login
-      </Button>  */}
+
       {isUserLoggedIn ? (
         <Button
           type="submit"
