@@ -14,6 +14,7 @@ import Spinner from "../../components/spinner/Spinner";
 import "./LandingPage.css";
 
 function LandingPage() {
+  const [allmovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,6 +25,7 @@ function LandingPage() {
         const { data, status } = res;
         if (status === 200) {
           setMovies(data);
+          setAllMovies(data);
           setIsLoading(false);
           console.log(data);
         }
@@ -34,9 +36,16 @@ function LandingPage() {
       });
   }, []);
 
+  const filterMoviesBySearch = (searchText) => {
+    const filteredMovies = allmovies.filter((movie) => {
+      return movie.name.toLowerCase().includes(searchText.toLowerCase());
+    });
+    setMovies(filteredMovies);
+  };
+
   return (
     <div>
-      <Header />
+      <Header filterMoviesBySearch={filterMoviesBySearch} showSearch={true} />
       <ImageCarousel
         images={[Movie1, Movie2, Movie3, Movie4, Movie5, Movie6, Movie7]}
       />

@@ -3,8 +3,10 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import "../../styles/Header.css";
 
-const Header = () => {
+const Header = (props) => {
+  const { filterMoviesBySearch, showSearch } = props;
   const navigate = useNavigate();
+  const [searchText, setSearchText] = useState("");
 
   const logoutFn = () => {
     localStorage.clear();
@@ -13,6 +15,12 @@ const Header = () => {
 
   const loginFn = () => {
     navigate("/login");
+  };
+
+  const searchFn = (e) => {
+    console.log(searchText);
+    e.preventDefault();
+    filterMoviesBySearch(searchText);
   };
 
   const isUserLoggedIn = localStorage.getItem("accessToken");
@@ -30,6 +38,20 @@ const Header = () => {
           Bookify
         </a>
       </div>
+
+      {showSearch && (
+        <form onSubmit={searchFn}>
+          <input
+            type="text"
+            className="custom-input"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+            placeholder="Enter movie name"
+          />
+        </form>
+      )}
 
       {isUserLoggedIn ? (
         <Button

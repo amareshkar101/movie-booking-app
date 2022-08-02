@@ -3,11 +3,12 @@ body {
     color: #f80040;
 }
 
-.movie-main{
+.movie-main {
     min-height: 50vh;
     text-align: center;
 }
-.row{
+
+.row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -16,12 +17,12 @@ body {
     text-align: center;
     color: black;
 }
-.movie-poster
-{
-width: 300px;
-height: 420px;
-margin-top: 10px;
-margin-bottom: 10px;
-border-radius: 20px;
-cursor: pointer;
+
+.movie-poster {
+    width: 300px;
+    height: 420px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
 }
