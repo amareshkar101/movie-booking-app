@@ -45,7 +45,10 @@ function LandingPage() {
 
   return (
     <div>
-      <Header filterMoviesBySearch={filterMoviesBySearch} showSearch={true} />
+      <Header
+        filterMoviesBySearch={filterMoviesBySearch}
+        //  showSearch={true}
+      />
       <ImageCarousel
         images={[Movie1, Movie2, Movie3, Movie4, Movie5, Movie6, Movie7]}
       />

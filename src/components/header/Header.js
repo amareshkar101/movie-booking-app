@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 import "../../styles/Header.css";
 
 const Header = (props) => {
-  const { filterMoviesBySearch, showSearch } = props;
+  const {
+    filterMoviesBySearch,
+    //  showSearch,
+    hideSearch,
+  } = props;
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState("");
 
@@ -39,7 +43,7 @@ const Header = (props) => {
         </a>
       </div>
 
-      {showSearch && (
+      {!hideSearch && (
         <form onSubmit={searchFn}>
           <input
             type="text"
