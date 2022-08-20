@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../../styles/Header.css";
 
@@ -32,15 +33,10 @@ const Header = (props) => {
   return (
     <div className="nav-header">
       <div>
-        <a
-          href="#"
-          className="link"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
+        <Link to="/" className="link">
+          <i class="fab fa-typo3" style={{ marginTop: 5, marginRight: 10 }} />
           Bookify
-        </a>
+        </Link>
       </div>
 
       {!hideSearch && (

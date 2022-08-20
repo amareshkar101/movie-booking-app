@@ -3,8 +3,11 @@
     height: 50px;
     display: flex;
     justify-content: center;
-    background-color: #150941;
+    background-color:#02042b  ;
+    /* background-color: #292b2c; */
     color: #f80040;
     font-weight: 500;
-    /* margin-top: 195px; */
+}
+.footer p{
+    margin-top: 12px;
 }

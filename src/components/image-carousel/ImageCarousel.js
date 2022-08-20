@@ -23,7 +23,6 @@ function ImageCarousel({ images }) {
   const settings = {
     infinite: true,
     lazyLoad: true,
-    dots: true,
     speed: 300,
     autoplay: true,
     slidesToShow: 1,

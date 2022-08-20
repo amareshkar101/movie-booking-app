@@ -11,12 +11,15 @@ import Movie6 from "../../assets/movie5.avif";
 import Movie7 from "../../assets/movie6.avif";
 import { getAllMovies } from "../../api/movies";
 import Spinner from "../../components/spinner/Spinner";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 
 function LandingPage() {
   const [allmovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true);
@@ -43,8 +46,12 @@ function LandingPage() {
     setMovies(filteredMovies);
   };
 
+  const handleGotoDetailPage = (movieId) => {
+    navigate(`/movie-detail/${movieId}`);
+  };
+
   return (
-    <div>
+    <div className="landing-body">
       <Header
         filterMoviesBySearch={filterMoviesBySearch}
         //  showSearch={true}
@@ -56,10 +63,14 @@ function LandingPage() {
         {isLoading ? (
           <Spinner />
         ) : (
-          <div className="row">
+          <div className="movie-row">
             {movies.map((movie) => {
               return (
-                <div>
+                <div
+                  onClick={() => {
+                    handleGotoDetailPage(movie._id);
+                  }}
+                >
                   <img
                     src={movie.posterUrl}
                     alt="poster"

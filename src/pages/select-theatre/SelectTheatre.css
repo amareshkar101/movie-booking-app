@@ -1,0 +1,57 @@
+.select-main {
+  background: url("../../assets/background.jpg");
+  color: white;
+  height: 400px;
+
+}
+.movie-details-upper{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+ 
+.movie-tag{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+} 
+.desc{
+    background-color: brown;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 10px;
+}
+
+.releaseStatus{
+    background-color: green;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 10px;
+
+}
+
+.language{
+    background-color: blue;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 10px;
+
+}
+.movie-text{
+    color: grey;
+    font-size: 15px;
+}
+.theatre-detail
+{
+    background-color: white;
+    color: black;
+    text-align: center;
+   padding-top: 20px;
+}
+.theatre-item{
+    border:  1px solid grey;
+    text-decoration: none;
+}
